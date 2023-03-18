@@ -13,14 +13,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4771d5cd20.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class="container-xs d-flex justify-content-between align-items-center">
         <div class="text-editor--header-logo">
             Mohammad Islam
         </div>
-        <div></div>
-        <div></div>
+        <div class="text-editor--header-open-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="text-editor--header-close-menu">
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+        </div>
+        <ul class="list-none text-editor--header-main-menu d-flex">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">CONNECT</a></li>
+        </ul>
     </header>
 </body>
 </html>

@@ -1,3 +1,7 @@
+:root {
+    font-size:100%;
+}
+
 * {
     box-sizing: border-box;
     padding:0;
@@ -5,6 +9,103 @@
     font-family: 'Inter', sans-serif;
 }
 
+
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #c400e6, 0 0 40px #e6d700, 0 0 50px #e6cf00, 0 0 60px rgb(178, 239, 220), 0 0 70px #93f2c7;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #534dff, 0 0 40px #4d8eff, 0 0 50px #4dbeff, 0 0 60px #4dd0ff, 0 0 70px #4dbeff, 0 0 80px #4dacff;
+    }
+  }
+
 .text-editor--header-logo {
     font-family: 'Sofia', cursive;
+    font-size: 3rem;
+    animation:glow 1s ease infinite alternate;
+}
+
+.container-xs {
+    width:80%;
+    max-width:1320px;
+    margin:auto;
+    padding:2rem 0;  
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.fa-bars, .fa-xmark {
+    font-size:3rem;
+}
+
+.fa-xmark {
+    color:red;
+}
+.list-none {
+    list-style-type: none;
+}
+
+.d-flex {
+    display:flex;
+}
+
+.text-editor--header-main-menu a {
+    text-decoration: none;
+    color:black;
+    padding:0.5rem 1rem;
+    display: inline-block;
+}
+
+.text-editor--header-main-menu a, .text-editor--header-logo, .text-editor--header-open-menu, .text-editor--header-close-menu {
+    cursor:grab;
+}
+
+.text-editor--header-open-menu, .text-editor--header-close-menu {
+    display:none;
+}
+
+@media screen and (max-width:980px){
+    .text-editor--header-open-menu {
+        display:block;
+    }
+
+    .text-editor--header-main-menu {
+        position:fixed;
+        flex-direction: column;
+        height:100vh;
+        width:90vw;
+        top:0;
+        left:-100%;
+        background-color: rgb(77, 142, 255,0.75);
+        padding-top:4rem;
+        align-items: center;
+        transition:left 0.3s ease;
+    }
+
+    .text-editor--header-main-menu a {
+        color:white;
+        transition:font-size 0.3s ease; 
+        padding:0.5rem; 
+      }
+
+    .text-editor--header-main-menu a:hover {
+        font-size:2rem;
+    }
+
+    .text-editor--header-close-menu {
+        position:fixed;
+        z-index:2;
+
+    }
 }
