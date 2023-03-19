@@ -75,6 +75,48 @@
     display:none;
 }
 
+.mb-4 {
+    margin-bottom: 4rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.flex-column {
+    flex-direction:column;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-editor--main {
+    padding:1rem 5rem;
+    background-color: #4dbeff;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgb(107, 96, 96);
+}
+
+.text-editor--main-text-editor-box {
+    padding:1rem 1rem;
+    border:1px solid black;
+    background-color: #93b4c7;
+}
+
+.px-2 {
+    padding:0 0.25rem;
+}
+
+textarea {
+    resize:none;
+    font-size: 1.5rem;
+    padding:1rem;
+}
+
+span {
+    font-size: 1.5rem;
+}
 @media screen and (max-width:980px){
     .text-editor--header-open-menu {
         display:block;

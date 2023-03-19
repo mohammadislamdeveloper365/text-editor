@@ -17,7 +17,7 @@
     <script defer src="./js/index.js"></script>
 </head>
 <body>
-    <header class="container-xs d-flex justify-content-between align-items-center">
+    <header class="container-xs d-flex justify-content-between align-items-center mb-4">
         <div class="text-editor--header-logo">
             Mohammad Islam
         </div>
@@ -34,8 +34,30 @@
         </ul>
     </header>
 
-    <main >
-
+    <main class="container-xs mb-4 text-editor--main">
+        <section class="text-editor--main-text-editor-container d-flex flex-column justify-content-center">
+            <h2 class="text-center mb-1">
+                Mohammad Islam's Mini Text Editor
+            </h2>
+            <div class="text-editor--main-text-editor-box mb-1">
+                <div class=" d-flex justify-content-between mb-1">
+                    <div>
+                        <span class="px-2 bold-txt">
+                            <b>B</b>
+                        </span>
+                        <span class="px-2 italic-txt">
+                            <i>I</i>
+                        </span>
+                        <span class="px-2 underline-txt">
+                            <u>U</u>
+                        </span>
+                    </div>
+                    
+                </div>
+                <hr>
+            </div>
+            <textarea name="text" id="input-text" cols="30" rows="10"></textarea>
+        </section>
     </main>
 </body>
 </html>
