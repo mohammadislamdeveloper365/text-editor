@@ -117,6 +117,26 @@ textarea {
 span {
     font-size: 1.5rem;
 }
+
+.delete-btn {
+    padding:0.5rem 1rem;
+    border:none;
+    color:white;
+    border-radius: 1rem;
+}
+
+.confirm-input {
+    padding:0.5rem;
+    border:none;
+    outline:none;
+    border-radius:0.25rem;
+}
+
+#error-msg {
+    color:red;
+}
+
+
 @media screen and (max-width:980px){
     .text-editor--header-open-menu {
         display:block;

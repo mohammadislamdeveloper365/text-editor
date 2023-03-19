@@ -5,7 +5,10 @@ const boldText = getElement('.bold-txt');
 const italicText = getElement('.italic-txt');
 const underlineText = getElement('.underline-txt');
 const textBox = getElement('#input-text');
-console.log(italicText)
+const inputBox = getElement('.confirm-input');
+const deleteBtn = getElement('.delete-btn');
+const errorMsg = getElement('#error-msg');
+console.log(inputBox, deleteBtn,errorMsg,textBox)
 addListener(openMenu, 'click', function () {
     mainMenu.style.left = 0;
     closeMenu.style.display = 'block';
@@ -39,6 +42,30 @@ addListener(underlineText, 'click',function () {
     textBox.style.textDecoration = 'underline';
     
 })
+
+addListener(inputBox, 'keyup', function() {
+    if(inputBox.value.length >= 1) {
+        deleteBtn.removeAttribute('disabled');
+        deleteBtn.style.backgroundColor = 'red';
+    }
+    else {
+        deleteBtn.setAttribute('disabled',true);
+        deleteBtn.style.backgroundColor = 'transparent';
+    }
+})
+
+
+addListener(deleteBtn,'click',function () {
+    if(inputBox.value === 'delete') {
+        textBox.value = '';
+        errorMsg.innerText = '';
+    }
+    else {
+        errorMsg.innerText = 'Please enter delete to confirm';
+    }
+});
+
+addListener
 
 function getElement(id) {
     return document.querySelector(id);
