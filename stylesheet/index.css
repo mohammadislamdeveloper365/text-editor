@@ -87,8 +87,8 @@
         width:90vw;
         top:0;
         left:-100%;
-        background-color: rgb(77, 142, 255,0.75);
-        padding-top:4rem;
+        background-color: rgba(5, 11, 20, 0.75);
+        padding-top:6rem;
         align-items: center;
         transition:left 0.3s ease;
     }
@@ -97,6 +97,7 @@
         color:white;
         transition:font-size 0.3s ease; 
         padding:0.5rem; 
+        font-size:1.25rem;
       }
 
     .text-editor--header-main-menu a:hover {
